@@ -1078,7 +1078,7 @@ SNAKE.Board = SNAKE.Board || (function() {
                 var keyNum = (evt.which) ? evt.which : evt.keyCode;
 
                 if (me.getBoardState() === 1) {
-                    if ( !(keyNum >= 37 && keyNum <= 40) && !(keyNum === 87 || keyNum === 65 || keyNum === 83 || keyNum === 68)) {return;} // if not an arrow key, leave
+                    if ( !(keyNum == 32)) {return;} // if not an arrow key, leave
 
                     // This removes the listener added at the #listenerX line
                     SNAKE.removeEventListener(elmContainer, "keydown", myKeyListener, false);
@@ -1088,7 +1088,7 @@ SNAKE.Board = SNAKE.Board || (function() {
                         var keyNum = (evt.which) ? evt.which : evt.keyCode;
 
                         //console.log(keyNum);
-                        if (keyNum === 32) {
+                        if (keyNum === 13) {
 							if(me.getBoardState()!=0)
                                 me.setPaused(!me.getPaused());
                         }
