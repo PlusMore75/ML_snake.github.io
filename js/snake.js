@@ -15,7 +15,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(320, 260);
+  let cns = createCanvas(320, 260);
+  cns.position(20,50,"fixed")
   // Create the video
   video = createCapture(VIDEO);
   video.size(320, 240);
